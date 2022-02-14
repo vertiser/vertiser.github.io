@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Tweetbot: great, yet not flawless, Twitter client | Leziak.com</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Tweetbot: great, yet not flawless, Twitter client" />
+<meta name="author" content="Kamil Leziak" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As most of you probably know, I’m a zealous fan of Twitter as it has been my first (and the only, after deleting Facebook account permanently in Summer 2014) social network. I’ve been using it productively for years and always happy with native Twitter app for mobile and its website on my computers. The day had finally come when I abandoned Twitter’s own app and moved on to a third party software, Tweetbot." />
+<meta property="og:description" content="As most of you probably know, I’m a zealous fan of Twitter as it has been my first (and the only, after deleting Facebook account permanently in Summer 2014) social network. I’ve been using it productively for years and always happy with native Twitter app for mobile and its website on my computers. The day had finally come when I abandoned Twitter’s own app and moved on to a third party software, Tweetbot." />
+<link rel="canonical" href="https://leziak.com/tweetbot-great-yet-not-flawless-twitter-client/" />
+<meta property="og:url" content="https://leziak.com/tweetbot-great-yet-not-flawless-twitter-client/" />
+<meta property="og:site_name" content="Leziak.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-06-13T10:29:19+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tweetbot: great, yet not flawless, Twitter client" />
+<script type="application/ld+json">
+{"datePublished":"2015-06-13T10:29:19+02:00","author":{"@type":"Person","name":"Kamil Leziak"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://leziak.com/tweetbot-great-yet-not-flawless-twitter-client/"},"description":"As most of you probably know, I’m a zealous fan of Twitter as it has been my first (and the only, after deleting Facebook account permanently in Summer 2014) social network. I’ve been using it productively for years and always happy with native Twitter app for mobile and its website on my computers. The day had finally come when I abandoned Twitter’s own app and moved on to a third party software, Tweetbot.","@type":"BlogPosting","url":"https://leziak.com/tweetbot-great-yet-not-flawless-twitter-client/","headline":"Tweetbot: great, yet not flawless, Twitter client","dateModified":"2015-06-13T10:29:19+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel=”apple-touch-icon” type="image/png" href=”favicon.png”><link type="application/atom+xml" rel="alternate" href="https://leziak.com/feed.xml" title="Leziak.com" /><!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//leziak.com/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Leziak.com</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/technology/">Technology</a><a class="page-link" href="/writing/">Writing</a><a class="page-link" href="/games/">Games</a><a class="page-link" href="/art/">Art</a><a class="page-link" href="/photography/">Photography</a><a class="page-link" href="/misc/">Misc.</a><a class="page-link" href="/tags/">Tags</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div><!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//leziak.com/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tweetbot: great, yet not flawless, Twitter client</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-06-13T10:29:19+02:00" itemprop="datePublished">13 Jun 2015
+      </time>
+  
+ |  
+   707 
+  words | Read time: 2 min. <br />
+ 
+ 
+  
+    <a href="/tags/tweetbot/">#tweetbot </a> 
+  
+    <a href="/tags/twitter/">#twitter </a> 
+  
+    <a href="/tags/software/">#software </a> 
+  
+</p>
+  </header>
+  
+  
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>As most of you probably know, I’m a zealous fan of Twitter as it has been my first (and the only, after deleting Facebook account permanently in Summer 2014) social network. I’ve been using it productively for years and always happy with native Twitter app for mobile and its website on my computers. The day had finally come when I abandoned Twitter’s own app and moved on to a third party software, Tweetbot.
+<!--more--></p>
+
+<p>It has been quite an interesting experience, I must say. I bought Tweetbot mostly for curiosity, some people I follow on the internet have been using and praising it intensively, so I thought ‘why don’t give it a chance?’. The decission was even easier due to discounted Mac version. I opened App Store and two minutes later a funny blue duck icon appeared in the launchpad. After a one-step configuration I’ve oppened Tweetbot and… was quite confused. The interface wasn’t very complicated, yet icons did not correspond with simple 3-tabs layout of native Twitter app. Fortunately three minutes later I figured most of it out. Now, after few days of using Tweetbot (for both Mac and iPhone) I would have called it a perfect Twitter client if not for one, but major flaw:
+<strong>Tweetbot cannot show who favourited a particular tweet (neither yours nor someone else’s).</strong></p>
+
+<p>Why Tweetbot won’t show you who favorited a tweet? Because it can’t.</p>
+
+<p>Don’t worry though, it’s not the fault of Tweetbot devs, it’s rather fault of Twitter devs, who have restricted their API, effectively blocking all third party applications from obtaining some specific informations, like the data about people who favorited a certain tweet. Tweetbot has a clever way to go around that limitation, however it’s far from perfect: it uses a complementary service called Favstar. If user who faved a tweet is a registered user of Favstar (and has linked his Twitter and Favstart accounts) his name and avatar will be shown on Favstar website, to which we are redirected by Tweetbot whenever we want to see details about people who favorited a post. At the moment for overy fifty Twitter users whose posts I’ve checked, only in one or two cases I saw single users who were registered in Favstar database and therefore their identity was know whenever they favorited someone’s tweet. But another 99%? They are only grey ‘?’ marks in Favstar and the only way to check who they are is to sign in on Twitter website or use its native app, which is rather pointless when you’ve abandoned it in the first place.</p>
+
+<p><img src="https://leziak.com/images/Tweetbot-three-columns-screen.jpg" alt="Tweetbot screen" width="740" height="" /></p>
+
+<p><em>Tweetbot is one of the prettiest apps I’ve ever seen. Unfortunately its features are limited due to Twitter API restrictions.</em></p>
+
+<p>I must admit that that was my biggest disappointment with Tweetbot, but on the other hand I was not aware of Twitter API limitations before. I do have my own app connected to Twitter API, but it has a single purpose and it never failed, so I hadn’t got a single reason to check deeper on the subject. Anyway, it’s frustrating that app with a retail price of $19,99 cannot perform as good as a native, free app. On the other hand Twitter devs’ policy is completely understandable as it’s not for their sake to allow other developers to steal the piece of cake they claim theirs.</p>
+
+<p>Fortunately the same limitation does not apply to retweets’ data, so you can see right in the Tweetbot dialogue box who exactly has retweeted your post (or <em>any</em> post, to be specific). You can still see that info in Favstar though, but it’s the same as with faves: you won’t be able to see the identity of retweeters if they are not registered at Favstar’s website).</p>
+
+<p>Tweetbot on its own is good (but not perfect) Twitter client and I would recomment it to everyone, at least at discounted price, because I’m not quite sure yet it is worth of the full price with certain limitations described above. Maybe when I use it more I’ll discover some new advantages that will change my mind. For now, it’s still better than the native Twitter app, atl least for someone who is ready to accept some certain limitations.</p>
+
+  </div>
+  
+ 
+  
+<div class="relatedPosts">
+
+ <h3>You may also like:</h3>
+
+
+
+
+
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+</div><a class="u-url" href="/tweetbot-great-yet-not-flawless-twitter-client/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Leziak.com</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Kamil Leziak</li>
+            <a href="https://leziak.com/about/">About</a></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://twitter.com/kamilleziak"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">kamilleziak</span></a></li><li><a href="https://www.youtube.com/vertiser"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">vertiser</span></a></li></ul></div>
+
+      <div class="footer-col footer-col-3">
+        <p>Articles about technology, photography, art, writing and games</p>
+      </div>
+    </div>
+    <div class="centerfooter">
+Copyright © 2015-2021 Kamil Leziak. All rights reserved.
+	</div>
+  </div>
+</footer>
+</body>
+
+</html>
