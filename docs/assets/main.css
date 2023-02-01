@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { mar
 main { display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */ }
 
 /** Images */
-img { max-width: 100%; vertical-align: middle; }
+img { max-width: 100%; vertical-align: middle; margin-left: auto; margin-right: auto; display: block; }
 
 .pagination a, .pagination span { padding: 7px 18px; border: 1px solid #eee; margin-left: -2px; margin-right: -2px; background-color: #ffffff; display: inline-block; }
 
@@ -146,6 +146,10 @@ table td { border: 1px solid #e8e8e8; }
 @media screen and (max-width: 800px) { .post-title { font-size: 36px; } }
 
 .post-content { margin-bottom: 30px; }
+
+.post-content h1 { font-size: 36.8px; }
+
+@media screen and (max-width: 800px) { .post-content h1 { font-size: 32px; } }
 
 .post-content h2 { font-size: 32px; }
 
