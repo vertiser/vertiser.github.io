@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Why a catch-all e-mail configuration may not be the best idea | Leziak.com</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Why a catch-all e-mail configuration may not be the best idea" />
+<meta name="author" content="Kamil Leziak" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I have been aware of the importance of a proper e-mail configuration and strict privacy for a long time, which is the main reason why I had left Gmail many years ago and migrated to another provider. One of advices I saw in many places on the Internet was to set up a catch-all e-mail domain, to ensure the convenience and privacy when using many accounts in various places online." />
+<meta property="og:description" content="I have been aware of the importance of a proper e-mail configuration and strict privacy for a long time, which is the main reason why I had left Gmail many years ago and migrated to another provider. One of advices I saw in many places on the Internet was to set up a catch-all e-mail domain, to ensure the convenience and privacy when using many accounts in various places online." />
+<link rel="canonical" href="https://leziak.com/catch-all/" />
+<meta property="og:url" content="https://leziak.com/catch-all/" />
+<meta property="og:site_name" content="Leziak.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-23T14:04:42+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Why a catch-all e-mail configuration may not be the best idea" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kamil Leziak"},"dateModified":"2024-01-23T14:04:42+01:00","datePublished":"2024-01-23T14:04:42+01:00","description":"I have been aware of the importance of a proper e-mail configuration and strict privacy for a long time, which is the main reason why I had left Gmail many years ago and migrated to another provider. One of advices I saw in many places on the Internet was to set up a catch-all e-mail domain, to ensure the convenience and privacy when using many accounts in various places online.","headline":"Why a catch-all e-mail configuration may not be the best idea","mainEntityOfPage":{"@type":"WebPage","@id":"https://leziak.com/catch-all/"},"url":"https://leziak.com/catch-all/"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:title" content="Why a *catch-all* e-mail configuration may not be the best idea">
+  <meta name="twitter:description" content="I have been aware of the importance of a proper e-mail configuration and strict privacy for a long time, which is the main reason why I had left Gmail many years ago and migrated to another provide...">
+ 
+  <!-- end twitter card -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel=”apple-touch-icon” type="image/png" href=”favicon.png”><link type="application/atom+xml" rel="alternate" href="https://leziak.com/feed.xml" title="Leziak.com" /><script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-KM8X4DHJ08', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KM8X4DHJ08"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KM8X4DHJ08');
+</script></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Leziak.com</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/technology/">Technology</a><a class="page-link" href="/writing/">Writing</a><a class="page-link" href="/games/">Games</a><a class="page-link" href="/art/">Art</a><a class="page-link" href="/photography/">Photography</a><a class="page-link" href="/misc/">Misc.</a><a class="page-link" href="/tags/">Tags</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div><script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'G-KM8X4DHJ08', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KM8X4DHJ08"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KM8X4DHJ08');
+</script></header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Why a *catch-all* e-mail configuration may not be the best idea</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-01-23T14:04:42+01:00" itemprop="datePublished">23 Jan 2024
+      </time>
+  
+ |  
+   1041 
+  words | Read time: 3 min. <br />
+ 
+ 
+  
+    <a href="/tags/email/">#email </a> 
+  
+    <a href="/tags/internet/">#internet </a> 
+  
+    <a href="/tags/100daystooffload/">#100daystooffload </a> 
+  
+</p>
+  </header>
+  
+  
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I have been aware of the importance of a proper e-mail configuration and strict privacy for a long time, which is the main reason why I had left Gmail many years ago and migrated to another provider. One of advices I saw in many places on the Internet was to set up a <em>catch-all</em> e-mail domain, to ensure the convenience and privacy when using many accounts in various places online. <!--more--></p>
+
+<p>In normal circumstances a person has one e-mail address in a single domain, i.e. <code class="language-plaintext highlighter-rouge">email@domain.com</code>. There is no explicit need to set up separate addresses for each and every service one uses their e-mail for. For example, I can use the same address with my social media accounts, utility companies, and so on. The issue that arises is, when many organisations, companies and individuals have one’s e-mail address in their databases, it is only a matter of time before one’s address leaks into the web and is used by third parties to send tons of spam. To avoid that, one can set up separate e-mail addresses, distinctive for each website and service they use. For example, one can set up an e-mail account (or simply just an alias forwarding messages to the main address) called <code class="language-plaintext highlighter-rouge">email2@domain.com</code> and use it only to log into a single website or service. That way, if they start to receive spam to that address they can first, identify that the company for which an account has been set up with that address has leaked that address, either intentionally or unintentionally. And secondly, they can simply delete that e-mail account or remove/disable the alias in order to stop receiving spam coming to <code class="language-plaintext highlighter-rouge">email2@domain.com</code>.</p>
+
+<p>That approach would work easily for a dozen or so services or websites, but the more different accounts one would have on different websites, the more tiresome managing separate e-mail accounts or aliases can become. At one point I had over <em>two hundred</em> accounts on different websites, for various services, social media, discussion boards, etc. It would be simply impractical for me to manage that many separate accounts or aliases, so I turned towards a more systemic approach. Depending on one’s e-mail provider, it can be possible to set up a configuration called a <em>catch-all</em>. It allows the user to create e-mail aliases <em>ad hoc</em>, without any configuration, by simply allowing for messages sent to <em>any</em> e-mail address in their domain to be forwarded to their main e-mail account (or to any account they own). Of course, this option is only possible when one owns the domain in which they have their e-mail address. It is not possible to set up a <em>catch-all</em> configuration for a <code class="language-plaintext highlighter-rouge">@gmail.com</code> address, for example. But if one owns the domain in which their e-mail address ends, it is possible to configure their e-mail so messages sent to any address whatsoever ending in <code class="language-plaintext highlighter-rouge">@domain.com</code> will be forwarded to their inbox.</p>
+
+<p>Such setting allows for a convenient creation of aliases on the go. Since e-mails sent to any address in one’s domain will appear in their main mailbox, there is no need to set up any aliases in e-mail configuration options — one could even type a random set of letters before the <code class="language-plaintext highlighter-rouge">@domain.com</code> and message sent to such random address would still be delivered to them. With <em>catch-all</em> enabled one can type any e-mail addresses on any websites. If one is setting up a Mastodon account on one of many servers, they can use address <code class="language-plaintext highlighter-rouge">mastodon@domain.com</code>. If they are configuring their account at the electricity provider, they can use an address like <code class="language-plaintext highlighter-rouge">energy@domain.com</code> or just <code class="language-plaintext highlighter-rouge">company@domain.com</code>. That way if they start receiving spam to the e-mail address they shared with that specific company only, they can be certain their address got leaked by the company.</p>
+
+<p>When I finally enabled <em>catch-all</em> for my e-mail domain I decided to wait for few weeks before I would start changing e-mail addresses associated with each of my two hundred accounts to a unique one, clearly identifying the company or its service. Since I had no previous experience with <em>catch-all</em>, I was wary to observe any potential adverse effects of enabling that option. And indeed, once <em>catch-all</em> became active, I started receiving even <em>more</em> spam than before!</p>
+
+<p>Initially, I was bewildered by that change. After all, I enabled that option to increase my privacy and reduce the usage of my primary e-mail address in places where it is not necessary. But quick analysis of new spam messages that started appearing after <em>catch-all</em> was turned on revealed that those were advertisements sent to some most common pre-defined e-mail addresses, like <code class="language-plaintext highlighter-rouge">contact@domain.com</code>, <code class="language-plaintext highlighter-rouge">info@domain.com</code>, <code class="language-plaintext highlighter-rouge">office@domain.com</code> and so on. I did not see that spam previously because I simply did not have such addresses created in the first place, therefore the e-mail server kept rejecting those messages, since they could not be delivered to a non-existent e-mail address. But enabling <em>catch-all</em> changed server’s response in a way that any e-mail sent to a non-existent address would be forwarded to my main e-mail account (after all, that is what <em>catch-all</em> is all about). That resulted in an increased volume of spam that reached my inbox.</p>
+
+<p>Perhaps spam filters of my e-mail provider would have eventually caught up with the new spam making its way into my inbox, but since those messages had not been reaching me before, my personal filter was not trained to block them effectively. After few weeks I have decided that <em>catch-all</em> was more trouble than it was worth and have disabled that option. My inbox instantaneously became cleaner, and few spam messages that still managed to reach my inbox were put in spam folder automatically by the filter.</p>
+
+<p>Perhaps there is a way to set up <em>catch-all</em> in a way that takes into account a list of certain addresses it rejects messages sent to automatically, although it would became <em>catch-some</em> in that circumstances. I have not explored the topic any further but if you have any experience in that regard feel free to <a href="../about">let me know</a>.</p>
+
+<p><em>This is article no. 5 from the <a href="../tags/100daystooffload/">100 Days To Offload</a> series.</em></p>
+
+  </div>
+  
+ 
+  
+<div class="relatedPosts">
+
+ <h3>You may also like:</h3>
+
+
+
+
+
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <li><a href="/100-days-offload/">100 Days To Offload: a writing challenge</a></li>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+</div><a class="u-url" href="/catch-all/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Leziak.com</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+       <ul class="contact-list">
+          <li class="p-name">Kamil Leziak</li>
+            <a href="../about/">About</a></ul>
+          <p class="rss-subscribe"><a href="/feed.xml">RSS feed</a></p>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a rel="me" href="https://mastodon.social/@vertiser"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">vertiser</span></a></li><li><a href="https://github.com/vertiser"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">vertiser</span></a></li><li><a href="https://www.flickr.com/photos/vertiser"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#flickr"></use></svg> <span class="username">vertiser</span></a></li><li><a href="https://www.youtube.com/vertiser"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">vertiser</span></a></li></ul></div>
+
+      <div class="footer-col footer-col-3">
+        <p>Articles about technology, photography, art, writing and games</p>
+      </div>
+    </div>
+    <div class="centerfooter">
+<p>Copyright © 2015-2024 Kamil Leziak. All rights reserved.</p>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
+	</div>
+  </div>
+</footer>
+</body>
+
+</html>
